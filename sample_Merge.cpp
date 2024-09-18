@@ -70,3 +70,22 @@ int main() {
         cout << arr[i] << " ";
     return 0;
 }
+
+
+
+// o/p:
+// first call 
+//  Second call 12
+//  Third call 11
+//  first call 11
+//  Second call 12
+//  Third call 11 12
+//  first call 11 12
+//  first call
+//  Second call 5
+//  Third call 5
+//  first call 5
+//  Second call 6 
+//  Third call 5 6
+//  Second call 13 5 6
+//  Third call 5 6 7 11 12 Sorted array: 5 6 7 11 12 13 
