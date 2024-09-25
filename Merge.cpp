@@ -5,7 +5,6 @@ void merge(int arr[], int l, int m, int r) {
     int n1 = m - l + 1;
     int n2 = r - m;
 
-    // Temporary arrays to hold the split elements
     int L[n1], R[n2];
 
     // Copy elements to left and right subarrays
@@ -45,18 +44,8 @@ void merge(int arr[], int l, int m, int r) {
 void mergeSort(int arr[], int l, int r) {
     if (l < r) {
         int m = l + (r - l) / 2;
-
-        // Recursively split the left half
         mergeSort(arr, l, m);
-        for (int i = l; i < m; i++)
-        cout << arr[i] << " ";
-        cout <<"\n";
-        // Recursively split the right half
         mergeSort(arr, m + 1, r);
-        for (int i = m; i < r; i++)
-        cout << arr[i] << " ";
-
-        // Merge the two halves after sorting
         merge(arr, l, m, r);
     }
 }
